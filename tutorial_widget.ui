@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>439</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>671</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::tab-bar {
+   border: 1px solid gray;
+}
+QTabBar::tab {
+  background: gray;
+  color: white;
+  padding: 10px;
+ }
+
+ QTabBar::tab:selected {
+  background: rgb(255, 152, 51);
+ }
+QTabWidget::pane { 
+   border: none;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Hyperspectral image</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_HSI">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>661</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::tab-bar {
+   border: 10px black;
+}
+QTabBar::tab {
+  background: gray;
+  color: white;
+  padding: 10px;
+ }
+
+ QTabBar::tab:selected {
+  background: rgb(102, 255, 102);;
+ }
+QTabWidget::pane { 
+   border: 5px solid white;
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>13</width>
+        <height>13</height>
+       </size>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>What is HSI</string>
+       </attribute>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>291</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(255,255,255,255);
+border-bottom-right-radius:50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="whatis_next">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>310</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(170, 255, 255);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    padding: 6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>70</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#383838; background-color:#ffffff;&quot;&gt;It collects &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#df2215; background-color:#ffffff;&quot;&gt;hundreds of images at different wavelengths&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#383838; background-color:#ffffff;&quot;&gt; for the same spatial area. While the human eye has only three color receptors in the blue, green and red, hyperspectral imaging measures &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#df2215; background-color:#ffffff;&quot;&gt;the continuous spectrum of the light for each pixel of the scene&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#383838; background-color:#ffffff;&quot;&gt; with fine wavelength resolution, not only in the visible but also in the near-infrared.&lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>20</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;What is hyperspectral?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2768.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2758.JPEG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>How to</string>
+       </attribute>
+       <widget class="QPushButton" name="howto_next">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>310</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(170, 255, 255);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    padding: 6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2759.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>291</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(255,255,255,255);
+border-bottom-right-radius:50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2766.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_3">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>70</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#292929; background-color:#ffffff;&quot;&gt;It is hard to process the data which is huge, as the Pavia University dataset has high dimensions. So the dimensions of the data are reduced to 3D using Principal Component Analysis(PCA)&lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_4">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>20</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;How to analyze?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <zorder>label_7</zorder>
+       <zorder>label_8</zorder>
+       <zorder>label_6</zorder>
+       <zorder>howto_next</zorder>
+       <zorder>textBrowser_3</zorder>
+       <zorder>textBrowser_4</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Application</string>
+       </attribute>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2761.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2767.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>291</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(255,255,255,255);
+border-bottom-right-radius:50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="application_next">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>310</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(170, 255, 255);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    padding: 6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_5">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>70</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#424242; background-color:#ffffff;&quot;&gt;Food: &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000; background-color:#ffffff;&quot;&gt; Hyperspectral imaging is widely used in the food sector&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#424242; background-color:#ffffff;&quot;&gt;. It is used in different discipline of food industry, bruise detection in apples, freshness of the fish, citrus fruit inspection, distribution of sugar in melons, and sorting of potatoes. &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000; background-color:#ffffff;&quot;&gt;For example apple bruise is not visible on the early stage and it takes few days to show dark color mark. &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#424242; background-color:#ffffff;&quot;&gt;In this type of scenario hyperspectral imaging techniques can be used to track the early stage of bruise for the quality control.&lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#424242;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#424242; background-color:#ffffff;&quot;&gt;Remote Sensing: &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000; background-color:#ffffff;&quot;&gt;In remote sensing technology it is very important to distinguish earth surface features&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#424242; background-color:#ffffff;&quot;&gt;, each features have different spectrum band. Multi spectral satellite can capture image up few bands for example Landsat 7 have 8 bands. But multi spectral imaging satellite can capture earth surface in more than 200 bands which helps scientist to differentiate objects that were not possible in multi spectral imaging because of spectral resolution.&lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_6">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>20</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Machine Learning</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_ML">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::tab-bar {
+   border: 10px black;
+}
+QTabBar::tab {
+  background: gray;
+  color: white;
+  padding: 10px;
+ }
+
+ QTabBar::tab:selected {
+  background: rgb(102, 255, 102);;
+ }
+QTabWidget::pane { 
+   border: 5px solid white;
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>13</width>
+        <height>13</height>
+       </size>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>What is ML</string>
+       </attribute>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>281</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image:url(:/shrimp/iCloud 사진/IMG_2768.JPG);
+border-top-left-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_8">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>20</y>
+          <width>271</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ML in Hyperspectral image processing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="whatml_next">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>310</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(170, 255, 255);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    padding: 6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2772.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>10</y>
+          <width>291</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(255,255,255,255);
+border-bottom-right-radius:50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_7">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>70</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;Machine learning techniques have been widely applied in quality determination of agricultural and food products&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#2e2e2e;&quot;&gt;. Different machine learning techniques like &lt;/span&gt;&lt;a href=&quot;https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/artificial-neural-network&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#2e2e2e;&quot;&gt;Artificial Neural Network&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt; color:#2e2e2e;&quot;&gt; , Fuzzy logic, decision trees, &lt;/span&gt;&lt;a href=&quot;https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/bayesian-learning&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#2e2e2e;&quot;&gt;Naïve Bayes&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt; color:#2e2e2e;&quot;&gt;, k-means clustering, SVM, random forest, k-NN and so on have been used extensively in agriculture related fields . &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;Deep learning is such another subdomain of machine learning&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#2e2e2e;&quot;&gt; that have shown superior performance in image classification of different food products and have established its potential to outperform even humans in some cases when trained adequately.&lt;/span&gt;&lt;span style=&quot; font-size:8.14286pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2758.JPEG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <zorder>label_4</zorder>
+       <zorder>label_3</zorder>
+       <zorder>textBrowser_8</zorder>
+       <zorder>whatml_next</zorder>
+       <zorder>label_13</zorder>
+       <zorder>textBrowser_7</zorder>
+       <zorder>label_12</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Application</string>
+       </attribute>
+       <widget class="QTextBrowser" name="textBrowser_10">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>20</y>
+          <width>271</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ML in Hyperspectral image processing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_9">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>70</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#ff0000;&quot;&gt;Machine learning techniques have been widely applied in quality determination of agricultural and food products&lt;/span&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#2e2e2e;&quot;&gt;. Different machine learning techniques like &lt;/span&gt;&lt;a href=&quot;https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/artificial-neural-network&quot;&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; text-decoration: underline; color:#2e2e2e; background-color:transparent;&quot;&gt;Artificial Neural Network&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#2e2e2e;&quot;&gt; , Fuzzy logic, decision trees, &lt;/span&gt;&lt;a href=&quot;https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/bayesian-learning&quot;&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; text-decoration: underline; color:#2e2e2e; background-color:transparent;&quot;&gt;Naïve Bayes&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#2e2e2e;&quot;&gt;, k-means clustering, SVM, random forest, k-NN and so on have been used extensively in agriculture related fields . &lt;/span&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#ff0000;&quot;&gt;Deep learning is such another subdomain of machine learning&lt;/span&gt;&lt;span style=&quot; font-family:'NexusSerif,Georgia,Times New Roman,Times,STIXGeneral,Cambria Math,Lucida Sans Unicode,Microsoft Sans Serif,Segoe UI Symbol,Arial Unicode MS,serif'; font-size:10pt; color:#2e2e2e;&quot;&gt; that have shown superior performance in image classification of different food products and have established its potential to outperform even humans in some cases when trained adequately.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>10</y>
+          <width>291</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(255,255,255,255);
+border-bottom-right-radius:50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2772.JPG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>291</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 50px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>image/IMG_2758.JPEG</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ml_appli_next">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>310</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background-color: rgb(170, 255, 255);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    padding: 6px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_11">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>80</y>
+          <width>271</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:11.4pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Arial,sans-serif'; font-size:10pt;&quot;&gt;We've seen machine learning used to make &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;image recognition and text translation&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; possible. Other applications include email spam and malware filtering, traffic predictions, medical diagnosis and virtual personal assistants. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_12">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>30</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Application &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionhome"/>
+   <addaction name="actiontutorial"/>
+   <addaction name="actiontrain"/>
+   <addaction name="actiontest"/>
+  </widget>
+  <action name="actionhome">
+   <property name="icon">
+    <iconset>
+     <normaloff>image/house.png</normaloff>image/house.png</iconset>
+   </property>
+   <property name="text">
+    <string>home</string>
+   </property>
+  </action>
+  <action name="actiontutorial">
+   <property name="icon">
+    <iconset>
+     <normaloff>image/tutorial.png</normaloff>image/tutorial.png</iconset>
+   </property>
+   <property name="text">
+    <string>tutorial</string>
+   </property>
+  </action>
+  <action name="actiontrain">
+   <property name="icon">
+    <iconset>
+     <normaloff>image/chip.png</normaloff>image/chip.png</iconset>
+   </property>
+   <property name="text">
+    <string>train</string>
+   </property>
+  </action>
+  <action name="actiontest">
+   <property name="icon">
+    <iconset>
+     <normaloff>image/test.png</normaloff>image/test.png</iconset>
+   </property>
+   <property name="text">
+    <string>test</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
